@@ -1,0 +1,11 @@
+# 统一换行符，避免 Windows/macOS 混用导致脚本执行失败
+* text=auto
+
+# Shell 脚本强制 LF（macOS/Linux 执行需要）
+*.sh text eol=lf
+
+# Windows 批处理保持 CRLF
+*.bat text eol=crlf
+
+# Python 文件统一 LF
+*.py text eol=lf
