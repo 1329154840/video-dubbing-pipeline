@@ -1098,7 +1098,8 @@ with gr.Blocks(title="视频配音 Pipeline") as app:
             with gr.Row():
                 voice_id_in = gr.Textbox(
                     label="Voice ID",
-                    value="DowyQ68vDpgFYdWVGjc3", scale=2,
+                    value=os.environ.get("ELEVENLABS_VOICE_ID", ""),
+                    scale=2,
                 )
             gr.Markdown("---\n### 文件路径")
             with gr.Row():
